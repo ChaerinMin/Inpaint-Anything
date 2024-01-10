@@ -13,28 +13,28 @@ from utils import load_img_to_array, save_array_to_img, dilate_mask, \
 
 def setup_args(parser):
     parser.add_argument(
-        "--input_img", type=str, required=True,
+        "--input_img", type=str, default="./example/remove-anything/00000030.jpg",
         help="Path to a single input img",
     )
     parser.add_argument(
-        "--coords_type", type=str, required=True,
+        "--coords_type", type=str,
         default="key_in", choices=["click", "key_in"], 
         help="The way to select coords",
     )
     parser.add_argument(
-        "--point_coords", type=float, nargs='+', required=True,
+        "--point_coords", type=float, nargs='+', default=[160, 107],
         help="The coordinate of the point prompt, [coord_W coord_H].",
     )
     parser.add_argument(
-        "--point_labels", type=int, nargs='+', required=True,
+        "--point_labels", type=int, nargs='+', default=[1],
         help="The labels of the point prompt, 1 or 0.",
     )
     parser.add_argument(
-        "--dilate_kernel_size", type=int, default=None,
+        "--dilate_kernel_size", type=int, default=15,
         help="Dilate kernel size. Default: None",
     )
     parser.add_argument(
-        "--output_dir", type=str, required=True,
+        "--output_dir", type=str, default="./results",
         help="Output path to the directory with results.",
     )
     parser.add_argument(
@@ -43,7 +43,7 @@ def setup_args(parser):
         help="The type of sam model to load. Default: 'vit_h"
     )
     parser.add_argument(
-        "--sam_ckpt", type=str, required=True,
+        "--sam_ckpt", type=str, default="./pretrained_models/sam_vit_h_4b8939.pth",
         help="The path to the SAM checkpoint to use for mask generation.",
     )
     parser.add_argument(
@@ -53,7 +53,7 @@ def setup_args(parser):
              "Default: the config of big-lama",
     )
     parser.add_argument(
-        "--lama_ckpt", type=str, required=True,
+        "--lama_ckpt", type=str, default="./pretrained_models/big-lama",
         help="The path to the lama checkpoint.",
     )
 

@@ -1,7 +1,7 @@
 python remove_anything.py \
     --input_img ./example/remove-anything/00000030.jpg \
     --coords_type key_in \
-    --point_coords 85 125 \
+    --point_coords 160 107 \
     --point_labels 1 \
     --dilate_kernel_size 15 \
     --output_dir ./results \

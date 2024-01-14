@@ -18,7 +18,7 @@ def find_best_checkpoint(model_list, models_dir):
         models = [m.strip() for m in f.readlines()]
     with open(f'{model_list}_best', 'w') as f:
         for model in models:
-            print(model)
+            # print(model)
             best_f1 = 0
             best_epoch = 0
             best_step = 0

@@ -9,7 +9,7 @@ from typing import Any, Dict, List
 
 from sam_segment import predict_masks_with_sam
 from stable_diffusion_inpaint import fill_img_with_sd
-from utils import load_img_to_array, save_array_to_img, dilate_mask, \
+from .utils import load_img_to_array, save_array_to_img, dilate_mask, \
     show_mask, show_points, get_clicked_point
 
 

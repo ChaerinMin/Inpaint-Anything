@@ -7,9 +7,9 @@ import numpy as np
 import PIL.Image as Image
 from pathlib import Path
 from diffusers import StableDiffusionInpaintPipeline
-from utils.mask_processing import crop_for_filling_pre, crop_for_filling_post
-from utils.crop_for_replacing import recover_size, resize_and_pad
-from utils import load_img_to_array, save_array_to_img
+from .utils.mask_processing import crop_for_filling_pre, crop_for_filling_post
+from .utils.crop_for_replacing import recover_size, resize_and_pad
+from .utils import load_img_to_array, save_array_to_img
 
 
 def fill_img_with_sd(

@@ -20,7 +20,7 @@ from ostrack import build_ostrack_model, get_box_using_ostrack
 from sttn_video_inpaint import build_sttn_model, \
     inpaint_video_with_builded_sttn
 from pytracking.lib.test.evaluation.data import Sequence
-from utils import dilate_mask, show_mask, show_points, get_clicked_point
+from .utils import dilate_mask, show_mask, show_points, get_clicked_point
 
 
 def setup_args(parser):
